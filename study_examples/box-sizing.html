@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 900px;
+            height: 600px;
+            background: #dddddd;
+            margin: 150px auto;
+        }
+
+        .box {
+            display: block;
+            margin: 30px;
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 15px solid blue;
+            padding: 15px;
+        }
+
+        .box.content-box {
+            box-sizing: content-box;
+        }
+
+        .box.border-box {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box"></div>
+    <div class="box content-box"></div>
+    <div class="box border-box"></div>
+</div>
+</body>
+</html>

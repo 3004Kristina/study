@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+<div class="container">
+    <form action="#" method="post">
+        <div class="forma">
+            <div class="form-group">
+                <label for="name-input">Имя</label>
+                <div class="username"><input id="name-input" name="name" type="text" placeholder="Имя пользователя" title="Начните заполнять форму" required></div>
+            </div>
+            <div class="form-group">
+                <label for="lastname-input">Фамилия</label>
+                <div class="userlastname"><input id="lastname-input" name="lastname" type="text" placeholder="Фамилия пользователя" required></div>
+            </div>
+            <div class="form-group">
+                <label for="fathername-input">Отчество</label>
+                <div class="userfathername"><input id="fathername-input" name="fathername" type="text" placeholder="Отчество пользователя" required></div>
+            </div>
+            <div class="form-group">
+                <label for="password-input" accesskey="s">Пароль</label>
+                <div class="userpassword"><input id="password-input" type="password" name="password" placeholder="Введите пароль" required></div>
+            </div>
+            <div class="form-group">
+                <label for="againpassword-input">Введите пароль еще раз</label>
+                <div class="userpasswordagain"><input id="againpassword-input" type="password" name="againpassword" placeholder="Введите пароль" required></div>
+            </div>
+            <!--<div class="form-group">
+                <label>Пол</label>
+            </div>
+            <div class="form-group">
+                <label for="gender-m-input">М</label>
+                <input id="gender-m-input" type="radio" name="genger" checked required>
+            </div>
+            <div class="form-group">
+                <label for="gender-f-input">Ж</label>
+                <input id="gender-f-input" type="radio" name="genger" required>
+            </div>-->
+
+            <div class="form-group">
+                <label>Пол</label>
+
+                <div class="radio-button-list">
+                    <div class="radio">
+                        <input id="gender2-m-input" type="radio" name="genger2" checked required>
+                        <label for="gender2-m-input">М</label>
+                    </div>
+
+                    <div class="radio">
+                        <input id="gender2-f-input" type="radio" name="genger2" required>
+                        <label for="gender2-f-input">Ж</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <label for="comment">Оставьте комментарий:</label><br>
+                <div class="usertextarea"><textarea id="comment" name="text" cols="50" rows="20"></textarea></div><br>
+            </div>
+            <button type="submit">Сохранить</button>
+            <button type="reset">Очистить</button>
+            <br>
+            <input type="checkbox" checked>Я даю свое согласие на обработку персональных данных.
+        </div>
+    </form>
+
+    <!--<div class="mainmenu">
+        <ul class="menu">
+            <li><a href="#">Главная страница</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Как проехать</a></li>
+        </ul>
+    </div>-->
+</div>
+
+</body>
+</html>

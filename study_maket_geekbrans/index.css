@@ -1,0 +1,88 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 0 100px;
+}
+
+.section-slider {
+    background-image: url("img/slider-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 63px;
+}
+
+.section-slider .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-slider .header ul.menu-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.section-slider .header ul.menu-list > li {
+
+}
+
+.section-slider .header ul.menu-list > li > a {
+
+}
+
+.headerz {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    /*margin-left: 98px;*/
+    /*margin-top: 63px;*/
+}
+
+ul {
+    padding: 0;
+}
+
+ul.menu-listz {
+    /*margin-top: 67px;*/
+    /*margin-right: 211px;*/
+    width: 490px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.menu-listz li {
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu-listz li a {
+    text-decoration: none;
+    /* Style for "HOME     P" */
+    color: #8c8c8c;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 48px;
+    text-transform: uppercase;
+    /* Text style for "HOME" */
+    color: #212121;
+    font-family: "Montserrat - Bold";
+    font-weight: 700;
+    letter-spacing: 1.4px;
+
+}

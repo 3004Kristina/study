@@ -1,0 +1,13 @@
+<meta charset = "UTF-8">
+<script>
+    var rouble = prompt ("Введите сумму в рублях:");
+    var dollar = 70;
+    var evro = 80;
+    dollar = parseInt(dollar);
+    evro = parseInt(evro);
+    var roIndol = rouble/dollar;
+    var roInevro = rouble/evro;
+    alert (rouble + "рублей = " + roIndol.toFixed(2) +"долларов \n" +
+          rouble + "рублей = "+ roInevro.toFixed(2) + "евро" );
+
+</script>

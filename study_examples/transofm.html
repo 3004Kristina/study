@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 900px;
+            height: 600px;
+            background: #dddddd;
+            margin: 150px auto;
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .red {
+            background: rgba(255, 0, 0, 0.5);
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+        }
+
+        .green {
+            background: rgba(0, 255, 0, 0.5);
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+
+        .blue {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 255, 0.5);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) skew(30deg);
+        }
+
+        .blue span {
+            transform: skew(-30deg);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="square red"></div>
+    <div class="square green"></div>
+    <div class="square blue"><span>HELLO WORLD</span></div>
+</div>
+</body>
+</html>
