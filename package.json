@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+        "node-sass": "^4.14.1"
+    },
+    "scripts": {
+        "watch-scss": "node-sass --watch --output-style compressed --source-map study_maket_geekbrans/ study_maket_geekbrans/index.scss study_maket_geekbrans/index.css"
+    }
+}
