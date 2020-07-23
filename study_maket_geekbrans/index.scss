@@ -736,6 +736,11 @@ a.exclusive-button:hover img {
 
         .stay-in-touch input {
             padding: 13px 223px 13px 15px;
+            background-image: url(img/.png);
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+            border: 1px solid #d9dee1;
+            background-color: #ffffff;
 
             placeholder {
                 color: #6c6c6c;
@@ -764,6 +769,4 @@ a.exclusive-button:hover img {
             letter-spacing: 0.6px;
         }
     }
-
-
 }
