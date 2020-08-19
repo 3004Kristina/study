@@ -1,0 +1,62 @@
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.form-group {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+input {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 0;
+    box-shadow: none;
+    color: #131313;
+    font-size: 13px;
+    min-height: 20px;
+    line-height: 25px;
+    padding: 10px 15px;
+    font-weight: 500;
+    margin: 5px 0px;
+}
+
+.radio-button-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.radio-button-list .radio {
+
+}
+
+.radio-button-list .radio input[type="radio"] {
+    display: none;
+}
+
+.radio-button-list .radio input[type="radio"] + label {
+    display: block;
+    padding: 5px 15px;
+    border: 1px solid gray;
+}
+
+.radio-button-list .radio input[type="radio"]:checked + label {
+    background: grey;
+    color: white;
+}
