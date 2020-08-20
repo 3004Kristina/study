@@ -181,9 +181,9 @@ html, body {
                 line-height: 36px;
             }
 
-            p{
+            p {
                 color: #999999;
-                font-family: "Roboto Condensed";
+                font-family: 'Roboto Condensed';
                 font-size: 12px;
                 font-weight: 300;
                 line-height: 24px;
@@ -194,11 +194,132 @@ html, body {
     }
 }
 
-.gallery{
+.services {
+    background-color: #f7f7f7;
+    margin-top: 90px;
+    padding-top: 90px;
+    padding-bottom: 106px;
+
+    h2 {
+        text-align: center;
+        color: #f44336;
+        font-family: Poppins;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 48px;
+        margin: 0;
+    }
+
+    .services-list {
+        margin-top: 87px;
+
+
+        ul.serv-list {
+            padding: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 90px;
+
+            li.serv-flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+
+
+                .serv-item {
+                    width: 280px;
+
+                    h4 {
+                        color: #000000;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: 0.16px;
+                        margin: 0;
+                        transition: color 0.3s;
+                    }
+
+                    p {
+                        color: #999999;
+                        font-family: 'Roboto Condensed';
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        letter-spacing: 0.12px;
+                    }
+                }
+
+                .img-list {
+                    width: 102px;
+                    height: 102px;
+                    border: 1px solid #acacac;
+                    background-color: #e1e1e1;
+                    border-radius: 50%;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: background-color 0.3s;
+                }
+
+                &:nth-child(2n + 1) {
+                    .serv-item {
+                        margin-right: 66px;
+
+                        h4 {
+                            text-align: end;
+                        }
+
+                        p {
+                            text-align: end;
+                        }
+                    }
+                }
+
+                &:nth-child(2n) {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+
+                    .serv-item {
+                        margin-left: 66px;
+
+                        h4 {
+                            text-align: start;
+                        }
+
+                        p {
+                            text-align: start;
+                        }
+                    }
+
+
+                }
+
+                &:hover {
+                    .serv-item {
+                        h4 {
+                            color: #f44336;
+                        }
+                    }
+                    .img-list{
+                        background-color: #f44336;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+.gallery {
     margin-top: 90px;
     margin-bottom: 90px;
 
-    h2{
+    h2 {
         margin: 0 0 92px 0;
         text-align: center;
         color: #f44336;
@@ -208,13 +329,13 @@ html, body {
         line-height: 48px;
     }
 
-    .gallery-container{
+    .gallery-container {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
-        
-        .gallery-item{
+
+        .gallery-item {
             background-color: #f7f7f7;
             margin-right: 30px;
             display: flex;
@@ -223,7 +344,7 @@ html, body {
             padding-bottom: 13px;
 
 
-            p{
+            p {
                 color: #000000;
                 font-family: Poppins;
                 font-size: 14px;
@@ -234,7 +355,7 @@ html, body {
                 text-align: center;
             }
 
-            button{
+            button {
                 width: 130px;
                 height: 30px;
                 background-color: #f44336;
