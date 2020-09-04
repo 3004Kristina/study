@@ -55,25 +55,23 @@ html, body {
 
         }
 
-        a {
-            display: block;
-            text-decoration: none;
 
-            button {
-                display: block;
-                font-family: 'Panton', sans-serif;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 16px;
-                line-height: 136%;
-                letter-spacing: 0.055em;
-                color: #3e3e3e;
-                background: linear-gradient(79.2deg, #ffd347 66.1%, #ffdb69 95.75%);
-                box-shadow: 0px 4px 1px #ad9547;
-                border-radius: 33px;
-                padding: 10px 25px;
-            }
+        button {
+            display: block;
+            font-family: 'Panton', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 136%;
+            letter-spacing: 0.055em;
+            color: #3e3e3e;
+            background: linear-gradient(79.2deg, #ffd347 66.1%, #ffdb69 95.75%);
+            box-shadow: 0px 4px 1px #ad9547;
+            border-radius: 33px;
+            border: none;
+            padding: 10px 25px;
         }
+
     }
 }
 
@@ -101,8 +99,9 @@ html, body {
                 letter-spacing: 0.055em;
                 color: #000000;
                 padding: 10px 30px;
+                outline: none;
 
-                &:hover {
+                &:hover, &:focus {
                     background: linear-gradient(79.2deg, #ffd347 66.1%, #ffdb69 95.75%);
                 }
             }
@@ -119,7 +118,7 @@ html, body {
     .container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
 
         .banner_text {
             p {
@@ -192,6 +191,7 @@ html, body {
                 box-shadow: 0px 4px 1px #ad9547;
                 border-radius: 33px;
                 padding: 10px 20px;
+                border: none;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -222,45 +222,44 @@ html, body {
         flex-direction: row;
         justify-content: space-between;
 
-        .item{
+        .item {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: start;
 
-            img{
+            img {
                 margin-right: 15px;
             }
 
-            p{
+            p {
                 font-family: 'Panton', sans-serif;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 136%;
                 letter-spacing: 0.055em;
-                color: #3E3E3E;
+                color: #3e3e3e;
             }
         }
     }
 }
 
-.uslugi{
-    background: #F3F3F3;
+.uslugi {
+    background: #f3f3f3;
     margin-top: 100px;
 
-    .container{
-
+    .container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 40px 0;
 
-        .uslugi_text{
+        .uslugi_text {
             margin-right: 70px;
 
-            h2{
+            h2 {
                 margin: 0;
                 font-family: 'Panton', sans-serif;
                 font-style: normal;
@@ -268,109 +267,152 @@ html, body {
                 font-size: 25px;
                 line-height: 136%;
                 letter-spacing: 0.055em;
-                color: #3E3E3E;
+                color: #3e3e3e;
             }
 
-            h4{
+            h4 {
                 font-family: 'Panton', sans-serif;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 136%;
                 letter-spacing: 0.055em;
-                color: #3E3E3E;
+                color: #3e3e3e;
                 margin: 10px 0;
             }
 
-            p{
-                font-family: 'Panton' sans-serif;
+            p {
+                font-family: 'Panton', sans-serif;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 136%;
                 letter-spacing: 0.055em;
-                color: #3E3E3E;
+                color: #3e3e3e;
                 margin: 0;
             }
-
         }
 
-        .uslugi_img{
+        .uslugi_img {
             flex-shrink: 0;
         }
     }
 }
 
-.detail{
-
-    .container{
-
-        .detail_list{
+.detail {
+    .container {
+        .detail_list {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            align-content: center;
             margin-top: 30px;
 
-            a.detail_item{
+            a.detail_item {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
                 text-decoration: none;
-                background: #F3F3F3;
+                background: #f3f3f3;
                 border-radius: 4px;
                 margin-right: 35px;
                 padding: 10px 30px;
 
-                .detail_text{
+                &:hover, &:focus {
+                    box-shadow: 0 0 12px rgba(0, 0, 0, .15);
 
-                    h2{
-                        font-family: "Panton", sans-serif;
+                    .detail_text {
+
+                        h2 {
+                            color: #131313;
+                        }
+
+                        p {
+                            color: #131313;
+
+                            img {
+                                transform: translateX(10px);
+                            }
+                        }
+                    }
+                }
+
+                .detail_text {
+
+                    h2 {
+                        font-family: 'Panton', sans-serif;
                         font-style: normal;
                         font-weight: bold;
                         font-size: 24px;
                         line-height: 136%;
                         letter-spacing: 0.055em;
-                        color: #3E3E3E;
+                        color: #3e3e3e;
                     }
 
-                    p{
-                        font-family: "Panton", sans-serif;
+                    p {
+                        font-family: 'Panton', sans-serif;
                         font-style: normal;
                         font-weight: 400;
                         font-size: 14px;
                         line-height: 136%;
                         letter-spacing: 0.055em;
-                        color: #3E3E3E;
+                        color: #3e3e3e;
+                        display: flex;
+                        align-items: center;
                     }
                 }
 
-                .detail_img{
-
+                .detail_img {
                     background: rgba(255, 211, 71, 0.45);
                     border-radius: 50%;
-                    width: 250px;
-                    height: 250px;
+                    width: 226px;
+                    height: 226px;
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
-
-
-                    img{
-                        
-
-                    }
-
-
+                    flex-shrink: 0;
                 }
             }
         }
     }
 }
 
+.calcul{
+    margin-top: 70px;
 
+    .container{
 
+        h2{
+            margin: 0;
+            font-family: "Panton", sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 136%;
+            letter-spacing: 0.055em;
+            color: #3E3E3E;
+            margin-bottom: 20px;
+        }
 
+        .calcul_stick{
+            width: 120px;
+            height: 6px;
+            background: #FFD347;
+        }
 
+        .calcul_grid{
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+
+            .calcul_reasons{
+                grid-row: 1 / 2 span;
+                grid-column: 2/ 1 span;
+            }
+
+        }
+    }
+}
