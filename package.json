@@ -8,6 +8,7 @@
         "through2": "^4.0.2"
     },
     "dependencies": {
+        "bootstrap": "^4.5.2",
         "jquery": "^3.5.1",
         "owl.carousel": "^2.3.4"
     }
