@@ -1,15 +1,113 @@
 <meta charSet="UTF-8">
+<style>
+    table td {
+        width:      40px;
+        height:     40px;
+        border:     1px solid #ccc;
+        text-align: center;
+    }
+</style>
 <script>
-        var a = prompt("Введите первое число");
-        var b = prompt("Введите второе число");
-            a= parseInt(a);
-            b= parseInt(b);
-        var c=a+b;
-        alert ("Сумма чисел равна "+ c);
-        c= a * b;
-        alert("Произведение чисел равно "+ c);
-        c= a / b;
-        alert("Частное двух чисел равно "+ c);
+    // var a = prompt("Введите первое число");
+    // var b = prompt("Введите второе число");
+    //     a= parseInt(a);
+    //     b= parseInt(b);
+    // var c=a+b;
+    // alert ("Сумма чисел равна "+ c);
+    // c= a * b;
+    // alert("Произведение чисел равно "+ c);
+    // c= a / b;
+    // alert("Частное двух чисел равно "+ c);
 
+    // let obj = [1, 2, 3, 4, 5];
+    // for (let i = 0; i < obj.length; i++) {
+    //     document.write(obj[i] + "<br>");
+    // }
+    //
+    // let umnoj = [2, 3, 4, 5];
+    // let result = 1;
+    // for (let i = 0; i < umnoj.length; i++) {
+    //     result = result * umnoj[i];
+    // }
+    // document.write(result + "<br>");
+    //
+    // let stolizu = {
+    //     "Минск" : "Беларусии",
+    //     "Москва" : "России",
+    //     "Киев" : "Украины"
+    // };
+    //
+    // for (let key in stolizu){
+    //     document.write(key + " - столица " + stolizu[key] + "." + "<br>");
+    // }
+    //
+    //  let a = 0;
+    // while (a <= 100){
+    //     if (a % 2 === 0) {
+    //         document.write(2*a +"<br>");
+    //     }
+    //     a++;
+    // }
+    //
+    // let res = 0;
+    // for (let i = 1; i <= 100; i++){
+    //     res = res + i;
+    // }
+    // document.write(res + "<br>");
+    //
+    // let sum = 0;
+    // let b = 1;
+    // while(b <=100){
+    //     sum = sum + b;
+    //     b++;
+    // }
+    // document.write(sum +"<br>");
+
+    // let columns = +prompt("Количество столбцов в таблице", "");
+    // let rows = +prompt("Количество строк в таблице", "");
+    // let td, tr = 0;
+    // for (let j = 0; j < columns; j++) {
+    //
+    // }
+    // for (var i = 0; i < rows; i++) {
+    //     tr += "<tr>" + i + "</tr>";
+    // }
+
+    let n = 1000;
+    let steps = 0;
+    while (n > 50) {
+        n = n / 2;
+        steps++;
+    }
+    console.log(steps);
+    console.log(n);
+
+    let columnCount = 20;
+    let rowCount = 20;
+    let html = ''; //<table><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>
+    html += "<table>";
+
+    for (let row = 1; row <= rowCount; row++) {
+        html += "<tr>";
+
+        for (let column = 1; column <= columnCount; column++) {
+            html += `<td>${column * row}</td>`;
+        }
+
+        html += "</tr>";
+    }
+
+    html += "</table>";
+
+    document.write(html);
+
+    let arrRandom = [];
+    arrRandom.push(Math.random());
+    arrRandom.push(Math.random());
+    arrRandom.push(Math.random());
+    arrRandom.push(Math.random());
+    arrRandom.push(Math.random());
+
+    console.log(arrRandom);
 </script>
 
