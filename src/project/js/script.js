@@ -12,7 +12,26 @@
 
  5) Добавить нумерацию выведенных фильмов */
 
+/* Задания на урок:
+
+ 1) Реализовать функционал, что после заполнения формы и нажатия кнопки "Подтвердить" -
+ новый фильм добавляется в список. Страница не должна перезагружаться.
+ Новый фильм должен добавляться в movieDB.movies.
+ Для получения доступа к значению input - обращаемся к нему как input.value;
+ P.S. Здесь есть несколько вариантов решения задачи, принимается любой, но рабочий.
+
+ 2) Если название фильма больше, чем 21 символ - обрезать его и добавить три точки
+
+ 3) При клике на мусорную корзину - элемент будет удаляться из списка (сложно)
+
+ 4) Если в форме стоит галочка "Сделать любимым" - в консоль вывести сообщение:
+ "Добавляем любимый фильм"
+
+ 5) Фильмы должны быть отсортированы по алфавиту */
+
+
 'use strict';
+
 
 const movieDB = {
     movies: [
@@ -36,15 +55,41 @@ promoGenre.textContent = 'драма';
 promoBg.style.backgroundImage = "url('img/bg.jpg')";
 
 
-const movieList = document.querySelector(".promo__interactive-list");
-
-movieList.innerHTML = "";
-movieDB.movies.sort();
-movieDB.movies.forEach((movie, i) => {
-    movieList.innerHTML += `<li class="promo__interactive-item">${i+1}. ${movie}
+    const movieList = document.querySelector(".promo__interactive-list");
+    movieList.innerHTML = "";
+    movieDB.movies.sort();
+    movieDB.movies.forEach((movie, i) => {
+        movieList.innerHTML += `<li class="promo__interactive-item">${i+1}. ${movie}
                                 <div class="delete"></div>
                             </li>`;
+    });
+
+
+
+let addForm = document.querySelector('form.add'),
+    addInput = addForm.querySelector('.adding__input'),
+    checkbox = addForm.querySelector("[type='checkbox']");
+
+addForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let film = addInput.value;
+    let favorite = checkbox.checked;
+
+
+        movieDB.movies.push(film);
+        movieDB.movies.sort();
+        movieList.innerHTML = "";
+        movieDB.movies.forEach((movie, i) => {
+            movieList.innerHTML += `<li class="promo__interactive-item">${i+1}. ${movie}
+                                 <div class="delete"></div>
+                             </li>`;
+    });
+
+        addForm.reset();
+
 });
+
+
 
 
 
