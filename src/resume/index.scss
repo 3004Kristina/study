@@ -42,8 +42,8 @@ header {
     transition: background-color 0.2s, opacity 0.2s;
 
     &.scroll_bg {
-        background-color: #131313;
-        opacity: 0.8;
+        background-color: rgb(35, 35, 40);
+
 
     }
 
@@ -117,7 +117,8 @@ header {
 }
 
 .about_me {
-    padding-top: 150px;
+    padding: 150px 0px;
+    background-color: rgb(248, 248, 248);
 
     .about_me_foto {
         display: flex;
@@ -129,19 +130,36 @@ header {
         width: 300px;
         height: 300px;
     }
+
+    .about_me_text{
+        text-align: center;
+        p{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 136%;
+            margin: 20px 0;
+
+            .fa{
+                color: rgb(134, 196, 64);
+            }
+        }
+    }
 }
 
+.skills {
+    margin-top: 150px;
+    .skills_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 30px;
+    }
 
-.skills_wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 30px;
-}
+    .item.large {
+        grid-row: 1/ 2 span;
 
-.item.large {
-    grid-row: 1/ 2 span;
-
+    }
 }
 
 .hobbies_carousel {
