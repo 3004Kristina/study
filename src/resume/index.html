@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Резюме</title>
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="../../node_modules/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -16,8 +16,9 @@
 <body>
 <section class="wrapper">
     <section class="content">
+        <div class="mobile_menu_bg"></div>
         <header>
-            <ul class="nav justify-content-end">
+            <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link active" href="index.html">Главная</a>
                 </li>
@@ -31,7 +32,14 @@
                     <a class="nav-link" href="contacts.html">Контакты</a>
                 </li>
             </ul>
+
+            <a href="#" class="mobile_menu_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </header>
+
         <section class="header">
             <div class="wrapper_bg">
                 <div class="header_content">
@@ -51,13 +59,13 @@
                     <div class="col">
                         <div class="about_me_text">
                             <p>
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                О себе</p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Alias asperiores ea esse et expedita, ipsa ipsum itaque laboriosam molestias praesentium
-                            quibusdam, reiciendis repellat repudiandae veniam voluptatibus. Accusantium blanditiis,
-                            consectetur enim nemo nulla officiis quis vero! Dolor dolores exercitationem explicabo facere
-                            facilis fugit in iste magnam magni molestias perspiciatis quaerat, voluptatem.
+                                О себе
+                            </p>
+                            Привет! Меня зовут Кристина и я начинающий frontend - разработчик! 2020 стал годом
+                            больших перемен. После переезда в Москву наконец появилась возможность
+                            развиваться в давно интересующей меня IT сфере. Этот сайт создан, как демонстрация
+                            приобретенных мной навыков и знаний. Я ищу работу с интересными проектами и возможностью
+                            дальше развиваться в web - разработке!
                         </div>
                     </div>
                 </div>
@@ -66,26 +74,110 @@
 
         <section class="skills">
             <div class="container">
-                <h2>Навыки</h2>
-                <div class="skills_wrapper mt-5">
-                    <div class="item large shadow p-2 bg-white rounded">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        A accusamus at autem culpa dignissimos eos esse eveniet, fugiat illo ipsam,
-                        modi molestias nam neque, nesciunt nulla odio pariatur possimus quasi qui rerum
-                        soluta veritatis voluptatem?
+                <h2>Навыки и технологии</h2>
+                <div class="skills_content_text">
+                    <p>
+                        Уверенно владею навыками кроссбраузерной адаптивной верстки. В качестве примера этот
+                        сайт доступен в мобильной версии. В работе практикую приведенные ниже технологии.
+                    </p>
+                </div>
+                <div class="skills_wrapper">
+                    <div class="skills_item">
+                        <div class="skills_logo">
+                            <img src="img/red_html.png" alt="">
+                        </div>
+                        <p class="skills_description">
+                            HTML5
+                        </p>
                     </div>
-                    <div class="item shadow p-2 bg-white rounded">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, earum?</div>
-                    <div class="item shadow p-2 bg-white rounded">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, tempore.</div>
+
+                    <div class="skills_item">
+                        <div class="skills_logo">
+                            <img src="img/css.png" alt="">
+                        </div>
+                        <p class="skills_description">
+                            CSS3
+                        </p>
+                    </div>
+
+                    <div class="skills_item">
+                        <div class="skills_logo">
+                            <img src="img/sass.png" alt="">
+                        </div>
+                        <p class="skills_description">
+                            Sass
+                        </p>
+                    </div>
+
+                    <div class="skills_item">
+                        <div class="skills_logo">
+                            <img src="img/boot.png" alt="">
+                        </div>
+                        <p class="skills_description">
+                            Bootstrap4
+                        </p>
+                    </div>
+
+                    <div class="skills_item">
+                        <div class="skills_logo">
+                            <img src="img/js.png" alt="">
+                        </div>
+                        <p class="skills_description">
+                            JavaScript
+                        </p>
+                    </div>
+
+                    <div class="skills_item">
+                        <div class="skills_logo">
+                            <img src="img/jquery.png" alt="">
+                        </div>
+                        <p class="skills_description">
+                            JQuery
+                        </p>
+                    </div>
+
+                    <div class="skills_item">
+                        <div class="skills_logo">
+                            <img src="img/git.png" alt="">
+                        </div>
+                        <p class="skills_description">
+                            Git
+                        </p>
+                    </div>
+
+                    <div class="skills_item">
+                        <div class="skills_logo">
+                            <img src="img/FIGMA.png" alt="">
+                        </div>
+                        <p class="skills_description">
+                            Figma
+                        </p>
+                    </div>
+
+                    <div class="skills_item">
+                        <div class="skills_logo">
+                            <img src="img/ps.png" alt="">
+                        </div>
+                        <p class="skills_description">
+                            Adobe PS
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="hobbies mt-5">
+        <section class="hobbies">
             <div class="container">
                 <h2>Увлечения</h2>
+                <p>В свободное время меня вдохновляют путешествия, природа, в особенности горы и открытие новых неизведанных мест!
+                    В карусели фотографии из последних путешествий.
+                </p>
                 <div class="hobbies_carousel">
-                    <div><img src="img/wall-1851061_1920.jpg" alt=""></div>
-                    <div><img src="img/clover-1225988_1920.jpg" alt=""></div>
-                    <div><img src="img/autumn-83761_1280.jpg" alt=""></div>
+                    <div><img src="img/photo_2020-10-12_16-59-50.jpg" alt=""></div>
+                    <div><img src="img/photo_2020-10-12_17-00-11.jpg" alt=""></div>
+                    <div><img src="img/photo_2020-10-12_17-00-16.jpg" alt=""></div>
+                    <div><img src="img/photo_2020-10-12_17-00-21.jpg" alt=""></div>
+                    <div><img src="img/photo_2020-10-12_17-00-25.jpg" alt=""></div>
                 </div>
             </div>
         </section>
@@ -104,7 +196,7 @@
                         <li>JQuery</li>
                         <li>Ajax</li>
                         <li>Git</li>
-                        <li>PhpStorm</li>
+                        <li>Figma</li>
                     </ul>
                 </div>
                 <div class="col">
@@ -115,8 +207,8 @@
                     </p>
                     <p>
                         "МБС-Технология"<br>
-                          Инженер-разработчик<br>
-                          октябрь 2014г - октябрь 2018г
+                        Инженер-разработчик<br>
+                        октябрь 2014г - октябрь 2018г
                     </p>
                     <p>
                         "Вектор-Бест"<br>
@@ -143,8 +235,8 @@
     </section>
 </section>
 
-<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../../node_modules/slick-carousel/slick/slick.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/slick-carousel/slick/slick.min.js"></script>
 <script src="index.js"></script>
 </body>
 </html>

@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Контакты</title>
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="../../node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 <section class="wrapper">
     <section class="content">
-        <section class="header">
-            <ul class="nav justify-content-end">
+        <div class="mobile_menu_bg"></div>
+        <header>
+            <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Главная</a>
                 </li>
@@ -29,30 +32,69 @@
                     <a class="nav-link active" href="contacts.html">Контакты</a>
                 </li>
             </ul>
-
-            <div class="container mt-5">
-                <div class="header_content">
-                    <div class="header_name">Герасимова Кристина</div>
-                    <div class="header_specialty">junior frontend developer</div>
+            <a href="#" class="mobile_menu_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </header>
+        <section class="header_contacts">
+            <div class="wrapper_bg_contacts">
+                <div class="header_content_contacts">
+                    Контакты
                 </div>
-
             </div>
         </section>
-        <section class="main_content">
+
+        <section class="main_contacts">
             <div class="container">
-                <div class="main_content_contacts_text shadow p-2 bg-white rounded mt-5">
-                    <p>Герасимова Кристина Владимировна</p>
-                    <p>г. Москва</p>
-                    <p>Телефон : <a href="tel:+79232359517">+7 923 235 95 17</a></p>
-                    <p>Email : <a href="mailto:kristina.usova@gmail.com" class="active-mail">kristina.usova@gmail.com</a></p>
+                <div class="contacts_info">
+                    <div class="info">
+                        <h4>Герасимова Кристина</h4>
+                        <p>
+                    <span class="icons">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </span>
+                            г. Москва
+                        </p>
+                        <p>
+                     <span class="icons">
+                         <i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>
+                     </span>
+                            Email : <a href="mailto:kristina.usova@gmail.com" class="active-mail"> kristina.usova@gmail.com</a>
+                        </p>
+                        <p>
+                     <span class="icons">
+                         <i class="fa fa-fw fa-phone" aria-hidden="true"></i>
+                     </span>
+                            Телефон : <a href="tel:+79232359517"> +7 923 235 95 17</a>
+                        </p>
+                    </div>
+                    <div class="info">
+                        <p class="form_text">Оставьте свои контактные данные и я с Вами свяжусь!</p>
+                        <form action="#" method="post">
+                            <div class="forma">
+                                <div class="form-group">
+                                    <!--<label for="name-input">Имя</label>-->
+                                    <div class="username"><input id="name-input" name="name" type="text" placeholder="Введите имя" title="Начните заполнять форму" required></div>
+                                </div>
+                                <div class="form-group">
+<!--                                    <label for="email-input">E-mail</label>-->
+                                    <div class="useremail"><input id="email-input" name="email" type="email" placeholder="Введите почту" required></div>
+                                </div>
+                                <div class="form-group">
+<!--                                    <label for="telephone-input">Телефон</label>-->
+                                    <div class="usertelephone"><input id="telephone-input" name="telephone" type="number" placeholder="Введите номер телефона" required></div>
+                                </div>
+                                <button class="btn_contacts">Отправить</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </section>
 
-
-
-    <section class="footer mt-5">
+    <section class="footer">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -66,7 +108,7 @@
                         <li>JQuery</li>
                         <li>Ajax</li>
                         <li>Git</li>
-                        <li>PhpStorm</li>
+                        <li>Figma</li>
                     </ul>
                 </div>
                 <div class="col">
@@ -89,17 +131,24 @@
                 <div class="col">
                     <div class="footer_info">
                         <h4>Контакты</h4>
-                        <p>Телефон : <a href="tel:+79232359517">+7 923 235 95 17</a></p>
-                        <p>Email : <a href="mailto:kristina.usova@gmail.com" class="active-mail">kristina.usova@gmail.com</a></p>
+                        <p>
+                            <i class="fa fa-fw fa-phone" aria-hidden="true"></i>
+                            Телефон : <a href="tel:+79232359517">+7 923 235 95 17</a></p>
+                        <p>
+                            <i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>
+                            Email : <a href="mailto:kristina.usova@gmail.com" class="active-mail">kristina.usova@gmail.com</a></p>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="footer_bottom">
+            <p>Все права защищены © 2020</p>
+        </div>
     </section>
 </section>
 
-<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../../node_modules/slick-carousel/slick/slick.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/slick-carousel/slick/slick.min.js"></script>
 <script src="index.js"></script>
 </body>
 </html>
