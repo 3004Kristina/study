@@ -51,7 +51,7 @@ mobile_menu_bg.addEventListener('click', () =>{
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const request = new XMLHttpRequest();
-    request.open('POST', 'server.php');
+    request.open('POST', '/server.php');
 
     const formData = new FormData(form);
     request.send(formData);
@@ -65,8 +65,3 @@ form.addEventListener('submit', (e) => {
 });
 
 
-let promise = new Promise(function(resolve, reject) {
-
-});
-
-thanks_modal.modal('show');
