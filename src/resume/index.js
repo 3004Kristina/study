@@ -20,7 +20,9 @@ const header = document.querySelector('header'),
       about_me = document.querySelector('.about_me'),
       mobile_menu_btn = document.querySelector('.mobile_menu_btn'),
       body = document.querySelector('body'),
-      mobile_menu_bg = document.querySelector('.mobile_menu_bg');
+      mobile_menu_bg = document.querySelector('.mobile_menu_bg'),
+      form = document.querySelector('form'),
+      thanks_modal = $('#thanks_modal');
 
 
 window.addEventListener('scroll', () =>{
@@ -46,3 +48,25 @@ mobile_menu_bg.addEventListener('click', () =>{
     body.classList.remove('mobile-menu-opened');
 });
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const request = new XMLHttpRequest();
+    request.open('POST', 'server.php');
+
+    const formData = new FormData(form);
+    request.send(formData);
+
+    request.addEventListener('load', () => {
+        if (request.status === 200) {
+            thanks_modal.modal('show');
+            form.reset();
+        }
+    });
+});
+
+
+let promise = new Promise(function(resolve, reject) {
+
+});
+
+thanks_modal.modal('show');
