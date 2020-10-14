@@ -7,7 +7,7 @@
 ssh mx440.ru
 
 # перейти в папку с проектом
-cd stydy
+cd study
 
 # подтаскиваем изменения из гита
 git pull origin master
