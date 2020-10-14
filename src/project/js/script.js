@@ -29,11 +29,38 @@
 
  5) Фильмы должны быть отсортированы по алфавиту */
 
+
+// 'use strict';
+//
+//
+// const movieDB = {
+//     movies: [
+//         'Логан',
+//         'Лига справедливости',
+//         'Ла-ла лэнд',
+//         'Одержимость',
+//         'Скотт Пилигрим против...'
+//     ]
+// };
+//
+// const adv = document.querySelectorAll('.promo__adv img');
+// adv.forEach(item => {
+//     item.remove();
+// });
+//
+// 3) При клике на мусорную корзину - элемент будет удаляться из списка (сложно)
+//
+// 4) Если в форме стоит галочка "Сделать любимым" - в консоль вывести сообщение:
+// "Добавляем любимый фильм"
+//
+// 5) Фильмы должны быть отсортированы по алфавиту */
+
+
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const advDelete = document.querySelectorAll('.promo__adv img'),
+    let advDelete = document.querySelectorAll('.promo__adv img'),
         promoBg = document.querySelector('.promo__bg'),
         promoGenre = promoBg.querySelector('.promo__genre'),
         movieList = document.querySelector('ul.promo__interactive-list'),
@@ -82,6 +109,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     someChanges(promoGenre, promoBg);
     arrDelete(advDelete);
+
+
+    movieList.innerHTML = '';
+    movieDB.movies.sort();
+    movieDB.movies.forEach((movie, i) => {
+        movieList.innerHTML += `<li class="promo__interactive-item">${i + 1}. ${movie}
+                                <div class="delete"></div>
+                            </li>`;
+    });
+
+
+
+
+    addForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let film = addInput.value;
+        let favorite = checkbox.checked;
+
+
+        movieDB.movies.push(film);
+        movieDB.movies.sort();
+        movieList.innerHTML = '';
+        movieDB.movies.forEach((movie, i) => {
+            movieList.innerHTML += `<li class="promo__interactive-item">${i + 1}. ${movie}
+                                 <div class="delete"></div>
+                             </li>`;
+        });
+
+        addForm.reset();
+    });
 });
 
 
@@ -170,6 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 //     createMovieList(movieDB.movies, $movieList);
 // });
+
+
 
 
 
