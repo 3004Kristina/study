@@ -771,3 +771,22 @@ a.exclusive-button:hover img {
         }
     }
 }
+
+@media (max-width: 780px) {
+    .section-featured {
+        .container {
+            .img_featured {
+                padding-top: 55px;
+                display: grid;
+                grid-template-columns:  1fr;
+                grid-gap: 30px;
+
+                .product{
+                    background-size: cover;
+                    background-position: left top;
+                }
+            }
+        }
+    }
+
+}
