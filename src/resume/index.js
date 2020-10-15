@@ -13,6 +13,8 @@ jQuery(function(){
         nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="fa fa-chevron-circle-right" aria-hidden="true"></button>',
         cssEase: 'linear'
     });
+
+    $("#telephone-input").mask("+7 (999) 999-99-99");
 });
 
 const header = document.querySelector('header'),
