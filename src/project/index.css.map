@@ -1,0 +1,1 @@
+{"version":3,"sources":["project/index.scss"],"names":[],"mappings":"AAAA,C,CAAG,O,CAAU,M,CACT,qB,CAGJ,I,CAAM,I,CACF,Q,CACA,S,CAGJ,Q,CACI,wB","file":"index.css","sourcesContent":["*, *:before, *:after {\n    box-sizing: border-box;\n}\n\nhtml, body {\n    margin: 0;\n    padding: 0;\n}\n\n.wrapper{\n    background-color: #1F2326;\n\n}"]}
