@@ -95,25 +95,26 @@ html, body {
     }
 }
 
-.main_content{
+.main_content {
     background-image: url(img/background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #FF4656;
-    padding: 70px 0 225px;
+    background-color: #ff4656;
+    padding: 70px 0 100px;
 
-    .container{
+    .container {
         width: 1260px;
         margin: 0 auto;
 
-        .main_content_wrapper{
+        .main_content_wrapper {
             display: flex;
             flex-direction: row;
 
-            .main_content_item_text{
+            .main_content_item_text {
                 width: 20%;
                 margin-right: 100px;
-                img{
+
+                img {
                     display: block;
                     //width: 230px;
                     height: 500px;
@@ -121,55 +122,56 @@ html, body {
                 }
             }
 
-            .main_content_item{
+            .main_content_item {
                 width: 20%;
                 margin: 0 30px;
                 position: relative;
-                    img{
-                        display: block;
-                        //width: 230px;
-                        height: 500px;
-                        background-color: #1F2326;
-                        object-fit: scale-down;
-                    }
 
-                    &.bg_white{
-                        img{
-                            background-color: #eeeeee;
-                        }
+                img {
+                    display: block;
+                    //width: 230px;
+                    height: 500px;
+                    background-color: #1f2326;
+                    object-fit: scale-down;
                 }
 
-                .icons{
+                &.bg_white {
+                    img {
+                        background-color: #eeeeee;
+                    }
+                }
+
+                .icons {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     padding: 8px;
-                    background: #1F2326;
-                    border: 2px solid #F8F8F8;
+                    background: #1f2326;
+                    border: 2px solid #f8f8f8;
                     position: absolute;
                     bottom: -20px;
                     right: -15px;
 
-                        img{
-                            display: block;
-                            width: 25px;
-                            height: 30px;
-                            object-fit: scale-down;
-                            margin: 0 13px;
-                        }
+                    img {
+                        display: block;
+                        width: 25px;
+                        height: 30px;
+                        object-fit: scale-down;
+                        margin: 0 13px;
+                    }
 
-                    &.bg_white{
+                    &.bg_white {
                         background-color: #eeeeee;
-                        border: 2px solid #1F2326;
+                        border: 2px solid #1f2326;
                     }
                 }
 
-                .hero_name{
+                .hero_name {
                     position: absolute;
                     top: 15px;
                     left: -15px;
 
-                    img{
+                    img {
                         display: block;
                         width: 30px;
                         height: auto;
@@ -182,7 +184,94 @@ html, body {
             }
         }
     }
+
+    .carausel_container {
+        width: 1200px;
+        margin-top: 150px;
+        margin-left: -150px;
+        position: relative;
+
+        .owl-carousel {
+            .carausel_item_wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                height: 189px;
+
+
+
+                .carausel_item {
+                    background: #f8f8f8;
+                    width: 250px;
+                    padding: 0 20px;
+                    position: relative;
+
+                    h4 {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 32px;
+                        color: #c4c4c4;
+                        margin: 10px 0;
+                    }
+
+                    h6 {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: #000000;
+                        margin: 0;
+                    }
+
+                    p {
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 20px;
+                        letter-spacing: 0.1em;
+                        color: #1f2326;
+                    }
+
+                    .carausel_logo {
+                        width: 130px;
+                        height: 130px;
+                        background-color: #ff4656;
+                        position: absolute;
+                        bottom: 0;
+
+                        img {
+                            display: block;
+                            width: 100px;
+                            height: 100px;
+                            position: absolute;
+                            top: -30px;
+                            right: -30px;
+                        }
+                    }
+
+                }
+            }
+
+            .owl-prev{
+                display: none;
+            }
+
+            .owl-next{
+                position: absolute;
+                right: -150px;
+                top: 0;
+                background-color: #F8F8F8;
+                width: 150px;
+                height: 189px;
+                border: 2px solid #000000;
+                background-image: url(img/Polygon.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+    }
 }
+
+
 
 .footer{
     background: #F8F8F8;
