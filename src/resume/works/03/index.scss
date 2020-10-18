@@ -324,10 +324,11 @@ html, body {
         padding: 10px 0 40px;
 
         .container {
-            width: auto;
+            width: 100%;
             margin: 0;
 
             .main_content_wrapper {
+                padding: 0 60px;
                 display: block;
 
                 .main_content_item_text {
@@ -336,7 +337,7 @@ html, body {
 
                 .main_content_item {
                     width: 100%;
-                    margin: 30px 60px 70px;
+                    margin: 30px 0 70px;
                     position: relative;
 
                     img {
@@ -348,24 +349,26 @@ html, body {
                     }
 
                     .icons {
-                        right: 120px;
+                        right: 15px;
                     }
                 }
             }
         }
 
         .carausel_container {
-            width: 700px;
+            width: 100%;
             margin-top: 70px;
-            margin-left: 8px;
+            margin-left: 0;
             position: relative;
+
 
             .owl-carousel {
                 .carausel_item_wrapper {
                     height: 150px;
 
                     .carausel_item {
-                        width: 200px;
+                        width: 100%;
+                        max-width: 200px;
                         padding: 0 20px;
 
 

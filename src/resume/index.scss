@@ -363,7 +363,8 @@ header {
     }
     .works_wrapper{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-gap: 30px;
         padding: 40px 0 120px;
 
@@ -372,6 +373,8 @@ header {
             a {
                 display: block;
                 width: 100%;
+                max-width: 720px;
+                margin: 0 auto;
                 transition: box-shadow 0.2s;
 
                 img {
