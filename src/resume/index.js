@@ -50,20 +50,57 @@ mobile_menu_bg.addEventListener('click', () =>{
     body.classList.remove('mobile-menu-opened');
 });
 
-form.addEventListener('submit', (e) => {
+$(form).on('submit', (e) => {
     e.preventDefault();
-    const request = new XMLHttpRequest();
-    request.open('POST', '/server.php');
-
+    // const request = new XMLHttpRequest();
+    // request.open('POST', '/server.php');
+    //
     const formData = new FormData(form);
-    request.send(formData);
+    // request.send(formData);
+    //
+    // request.addEventListener('load', () => {
+    //     if (request.status === 200) {
+    //         thanks_modal.modal('show');
+    //         form.reset();
+    //     }
+    // });
 
-    request.addEventListener('load', () => {
-        if (request.status === 200) {
+    fetch('/server.php', {
+        method: 'POST',
+        body: {
+            name: formData.get('name'),
+            phone: formData.get('phone'),
+            email: formData.get('email')
+        }
+    })
+        .then(response =>{
             thanks_modal.modal('show');
             form.reset();
-        }
-    });
+        });
+
+    fetch('https://strapi.mx440.ru/resume-zayavkis', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: formData.get('name'),
+            phone: formData.get('phone'),
+            email: formData.get('email')
+        })
+    })
+        .then(response => response.text())
+        .then(txt => console.log(JSON.parse(txt)));
 });
 
+// fetch('https://strapi.mx440.ru/test-items',{
+//     method: 'POST',
+//     body: JSON.stringify({
+//         Name: 'fkdffn',
+//         Description: 'jfkjjfgbdbkf',
+//         Date: '2020-10-06T09:00:00.000Z'
+//     })
+// })
+//     .then(response => response.text())
+//     .then(txt => console.log(JSON.parse(txt)));
 
